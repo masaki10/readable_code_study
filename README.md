@@ -13,7 +13,7 @@ o def FetchPage(url):
 
 ツリーの高さ？ノードの数？ツリーのメモリ消費量？
 
-Height()&nbsp&nbsp&nbsp&nbsp&nbsp&nbspNumNodes()  MemoryBytes()
+Height() &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NumNodes ()  MemoryBytes()
 ```
 class BinaryTree {
     ins Size();
