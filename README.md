@@ -109,3 +109,34 @@ class LogReader {
 <div id="middle_column" class="main-content"></div>
 ```
 
+曖昧な言葉を避ける
+```
+x results = Database.all_objects.filter("year <= 2011")
+
+o results = Database.all_objects.select("year <= 2011")
+o results = Database.all_objects.exclude("year <= 2011")
+```
+
+限界値を含めるときはmin, maxを使う
+```
+x CART_TOO_BIG_LIMIT
+
+o MAX_ITEMS_IN_CART
+```
+
+範囲を以下で指定するとき
+```
+integer_range(first=2, last=4) // 2, 3, 4
+```
+
+範囲を未満で指定するとき
+```
+integer_range(begin=2, end=4) // 2, 3
+```
+
+get()やsize()などは軽い処理が期待される
+```
+x getMean() { // 重い処理 }
+
+o computeMean() { // 重い処理 }
+```
